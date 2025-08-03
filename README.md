@@ -11,5 +11,5 @@ S0, A0, R1, S1
 The agent’s goal is to maximize its *cumulative reward*, called the **expected return**.
 
 ### Observations/States Space
-State s: is a complete description of the state of the world (there is no hidden information). In a fully observed environment.
-Observation o: is a partial description of the state. In a partially observed environment.
+- State s: is a complete description of the state of the world (there is no hidden information). In a fully observed environment.
+- Observation o: is a partial description of the state. In a partially observed environment.
