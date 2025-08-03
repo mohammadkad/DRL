@@ -35,4 +35,4 @@ This Policy is the function we want to learn, our goal is to find the optimal po
 - Policy-based methods (Directly) : we learn a policy function directly.
   - Deterministic
   - Stochastic
-- Value-based methods (Indirectly)
+- Value-based methods (Indirectly) : we learn a value function that maps a state to the expected value of being at that state.
