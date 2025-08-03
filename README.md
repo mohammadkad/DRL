@@ -13,3 +13,9 @@ The agent’s goal is to maximize its *cumulative reward*, called the **expected
 ### Observations/States Space
 - State s: is a complete description of the state of the world (there is no hidden information). In a fully observed environment.
 - Observation o: is a partial description of the state. In a partially observed environment.
+
+### Action Space
+The Action space is the set of all possible actions in an environment. The actions can come from a discrete or continuous space.
+
+### Reward
+![Reward](pics/Reward.jpg)
