@@ -33,6 +33,6 @@ The Policy π: the agent’s brain
 This Policy is the function we want to learn, our goal is to find the optimal policy π*, the policy that maximizes expected return when the agent acts according to it. We find this π* through training.
 
 - Policy-based methods (Directly) : we learn a policy function directly.
-* Deterministic
-* Stochastic
+  - Deterministic
+  - Stochastic
 - Value-based methods (Indirectly)
