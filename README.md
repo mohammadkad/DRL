@@ -18,4 +18,4 @@ The agent’s goal is to maximize its *cumulative reward*, called the **expected
 The Action space is the set of all possible actions in an environment. The actions can come from a discrete or continuous space.
 
 ### Reward
-![Reward](pics/Reward.jpg)
+![pics/Reward.jpg](https://github.com/mohammadkad/DRL/blob/main/pics/rewards.jpg)
