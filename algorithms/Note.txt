@@ -1,1 +1,8 @@
+# DDPG notes:
+# 1404-05-26, Mohammad Kadkhodaei
+The original DDPG used larger layers (400 → 300), but later implementations (like OpenAI’s, Stable Baselines, etc.) often use 256 → 256 for efficiency.
+The core idea remains the same: a simple feedforward network with ReLU (hidden) + Tanh (output).
+
+
+
 https://huggingface.co/learn/deep-rl-course/en/unit0/introduction
