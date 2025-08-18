@@ -30,3 +30,27 @@ Mohammad Kadkhodaei
             │                            │    - Update target nets   │
             │                            │                           │
             └────────────────────────────┴──────────────────────────-┘
+
+Key Steps in Workflow:
+
+1- Environment provides current state
+
+2- Agent selects action using actor network + exploration noise
+
+3- Action is executed in environment
+
+4-Environment returns reward, next state, and done flag
+
+5- Transition is stored in replay buffer
+
+6- Random batch is sampled from buffer for learning
+
+7- Networks are updated:
+
+  Critic learns to better estimate Q-values
+
+  Actor learns to select better actions
+
+  Target networks are softly updated
+
+8- Process repeats
