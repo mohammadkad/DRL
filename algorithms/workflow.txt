@@ -1,0 +1,32 @@
+DDPG Workflow Diagram
+Mohammad Kadkhodaei
+1404-05-27
+┌───────────────────────┐    ┌───────────────────────┐
+│      Environment      │    │      DDPG Agent       │
+└───────────┬───────────┘    └───────────┬───────────┘
+            │                            │
+            │ 1. Current State (s)       │
+            ├───────────────────────────>│
+            │                            │
+            │                            │ 2. Select Action (a = μ(s) + noise)
+            │                            ├───────────────────────────┐
+            │                            │                           │
+            │ 3. Execute Action (a)      │                           │
+            │<──────────────────────────-┤                           │
+            │                            │                           │
+            │ 4. Observe (r, s', done)   │                           │
+            ├───────────────────────────>│                           │
+            │                            │                           │
+            │                            │ 5. Store (s,a,r,s',done)  │
+            │                            │ in Replay Buffer          │
+            │                            │                           │
+            │                            │ 6. Sample Random Batch    │
+            │                            │ from Replay Buffer        │
+            │                            │                           │
+            │                            │ 7. Update Networks:       │
+            │                            │    - Compute targets      │
+            │                            │    - Update critic        │
+            │                            │    - Update actor         │
+            │                            │    - Update target nets   │
+            │                            │                           │
+            └────────────────────────────┴──────────────────────────-┘
