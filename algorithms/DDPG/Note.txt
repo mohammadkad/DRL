@@ -6,3 +6,19 @@ The core idea remains the same: a simple feedforward network with ReLU (hidden) 
 
 
 https://huggingface.co/learn/deep-rl-course/en/unit0/introduction
+
+
+
+
+# 1404-05-30 :
+#---
+Core Weaknesses of Vanilla DDPG
+- Hyperparameter Sensitivity: DDPG's performance is highly sensitive to the choice of hyperparameters (e.g., learning rates, noise parameters).
+- Sample Inefficiency: Like most off-policy algorithms, it can require a large number of environment interactions to learn effectively.
+- Training Instability: The Q-function can diverge or become overestimated, leading to catastrophic forgetting and policy collapse.
+- Overestimation Bias: The max operation in the Q-learning target is inherently prone to overestimating Q-values. In DDPG, the target actor network provides the "max" action, which can compound this error.
+
+Variants:
+- Twin Delayed DDPG (TD3)
+- Soft Actor-Critic (SAC)
+# ---
