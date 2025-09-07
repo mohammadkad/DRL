@@ -10,6 +10,11 @@ import numpy as np
 from collections import deque
 import random
 
+'''
+Approximates the Q-function: Q(s, a) 
+Outputs Q-values for all actions given a state, IN CODE: q_values = self.q_network(state)
+Uses ReLU activations for non-linearity
+'''
 class QNetwork(nn.Module):
     def __init__(self, state_dim, action_dim, hidden_dim=128):
         super(QNetwork, self).__init__()
@@ -24,6 +29,12 @@ class QNetwork(nn.Module):
     def forward(self, state):
         return self.network(state)
 
+'''
+Experience Replay Buffer:
+Stores experiences (s, a, r, s', done)
+Enables batch learning by sampling random experiences
+Breaks temporal correlations in the data
+'''
 class ReplayBuffer:
     def __init__(self, capacity):
         self.buffer = deque(maxlen=capacity)
@@ -57,6 +68,12 @@ class NFQAgent:
         self.replay_buffer = ReplayBuffer(buffer_size)
         self.loss_fn = nn.MSELoss()
     
+    '''
+    Exploration vs Exploitation:
+    ε-greedy policy: Balances exploration and exploitation
+    Exploration: Random actions to discover new states
+    Exploitation: Choose best known action
+    '''
     def select_action(self, state, epsilon=0.1):
         if random.random() < epsilon:
             return random.randint(0, self.action_dim - 1)
@@ -65,6 +82,13 @@ class NFQAgent:
             q_values = self.q_network(state)
             return q_values.argmax().item()
     
+    
+    '''
+    NFQ Learning Update:
+    Bellman Equation: Q(s, a) = r + γ * maxₐ' Q(s', a')
+    Target Network: Provides stable targets for learning
+    MSE Loss: Minimizes difference between current and target Q-values
+    '''
     def update(self):
         if len(self.replay_buffer) < self.batch_size:
             return
