@@ -1,5 +1,6 @@
 # 1404-06-16
 # Mohammad Kadkhodaei
+# NFQ: neural fitted Q (NFQ) iteration
 # ---
 
 import torch
