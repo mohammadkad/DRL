@@ -12,3 +12,8 @@
       - The action-value function
 
 
+- This can be a computationally expensive process, and that’s where the Bellman equation comes in to help us.
+
+- Monte Carlo vs Temporal Difference Learning:
+  - Monte Carlo uses an entire episode of experience before learning
+  - Temporal Difference uses only a step (St, At, Rt+1, St+1) to learn.
