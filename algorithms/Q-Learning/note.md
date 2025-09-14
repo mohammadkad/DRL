@@ -22,4 +22,9 @@
   - Q-Learning is an off-policy value-based method that uses a TD approach to train its action-value function
   - TD approach: updates its action-value function at each step instead of at the end of the episode.
   - Q-Learning is the algorithm we use to train our Q-function (action-value function)
+  - The Q comes from “the Quality” (the value) of that action at that state.
+  - Q-function is encoded by a Q-table, a table where each cell corresponds to a state-action pair value. (Q-table as the memory or cheat sheet)
+  - Trains a Q-function (an action-value function), which internally is a Q-table that contains all the state-action pair values.
+  - When the training is done, we have an optimal Q-function, which means we have optimal Q-table.
+  - And if we have an optimal Q-function, we have an optimal policy since we know the best action to take at each state.
   
