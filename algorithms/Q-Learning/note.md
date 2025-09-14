@@ -16,4 +16,10 @@
 
 - Monte Carlo vs Temporal Difference Learning:
   - Monte Carlo uses an entire episode of experience before learning
-  - Temporal Difference uses only a step (St, At, Rt+1, St+1) to learn.
+  - Temporal Difference (TD) uses only a step (St, At, Rt+1, St+1) to learn.
+ 
+  What is Q-Learning?
+  - Q-Learning is an off-policy value-based method that uses a TD approach to train its action-value function
+  - TD approach: updates its action-value function at each step instead of at the end of the episode.
+  - Q-Learning is the algorithm we use to train our Q-function (action-value function)
+  
