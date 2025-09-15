@@ -16,6 +16,12 @@ The Deep Q-Learning training algorithm has two phases:
 
 To help us stabilize the training, we implement three different solutions:
  - Experience Replay to make more efficient use of experiences.
- - Fixed Q-Target to stabilize the training.
+ - Fixed Q-Target to stabilize the training, without target > Moving Target Problem: The network is trying to hit a target (Q-values) that keeps moving because the target is calculated from the same network that's being updated
  - Double Deep Q-Learning, to handle the problem of the overestimation of Q-values.
+
+More Improvements:
+- Double DQN, ?
+- Dueling DQN, ?
+- Prioritized Experience Replay, ?
+- Learning rate scheduling, ?
 
