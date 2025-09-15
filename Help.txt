@@ -1,0 +1,4 @@
+# 1404-06-24
+# ---
+apt-get install swig cmake ffmpeg -> In Windows -> conda install -c conda-forge swig cmake ffmpeg
+# ---
