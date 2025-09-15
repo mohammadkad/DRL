@@ -1,5 +1,6 @@
 # 1404-06-24
 # Mohammad Kadkhodaei
+# trained locally on PC, uploaded to huggingface
 # ---
 
 pip install rl_zoo3
