@@ -1,0 +1,49 @@
+# 1404-06-24
+# Mohammad Kadkhodaei
+# ---
+
+pip install rl_zoo3
+pip install gymnasium[atari]
+pip install gymnasium[accept-rom-license]
+pip install opencv-python
+
+
+# --- dqn.yml
+SpaceInvadersNoFrameskip-v4:
+  env_wrapper:
+    - stable_baselines3.common.atari_wrappers.AtariWrapper
+  frame_stack: 4
+  policy: 'CnnPolicy'
+  n_timesteps: !!float 1e6
+  buffer_size: 100000
+  learning_rate: !!float 1e-4
+  batch_size: 32
+  learning_starts: 100000
+  target_update_interval: 1000
+  train_freq: 4
+  gradient_steps: 1
+  exploration_fraction: 0.1
+  exploration_final_eps: 0.01
+  # If True, you need to deactivate handle_timeout_termination
+  # in the replay_buffer_kwargs
+  optimize_memory_usage: False
+# ---
+
+
+python -m rl_zoo3.train --algo dqn  --env SpaceInvadersNoFrameskip-v4 -f logs/ -c dqn.yml
+
+# evaluate our agent
+python -m rl_zoo3.enjoy  --algo dqn  --env SpaceInvadersNoFrameskip-v4  --no-render  --n-timesteps 5000  --folder logs/
+
+
+pip install moviepy
+
+
+# In notebook:
+# ---
+from huggingface_hub import notebook_login # To log to our Hugging Face account to be able to upload models to the Hub.
+notebook_login()
+!git config --global credential.helper store
+
+!python -m rl_zoo3.push_to_hub  --algo dqn  --env SpaceInvadersNoFrameskip-v4  --repo-name dqn-SpaceInvadersNoFrameskip-v4  -orga mohammadkad  -f logs/
+# ---
