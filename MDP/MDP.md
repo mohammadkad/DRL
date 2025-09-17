@@ -19,10 +19,10 @@ Solutions:
  - Memory-based architectures (Transformers, NTM).
 
 Extensions to MDPs:
-• Partially observable Markov decision process (POMDP): When the agent cannot fully observe the environment state
-• Factored Markov decision process (FMDP): Allows the representation of the transition and reward function more compactly so that we can represent large MDPs
-• Continuous [Time|Action|State] Markov decision process: When either time, action, state or any combination of them are continuous
-• Relational Markov decision process (RMDP): Allows the combination of probabilistic and relational knowledge
-• Semi-Markov decision process (SMDP): Allows the inclusion of abstract actions that can take multiple time steps to complete
-• Multi-agent Markov decision process (MMDP): Allows the inclusion of multiple agents in the same environment
-• Decentralized Markov decision process (Dec-MDP): Allows for multiple agents to collaborate and maximize a common reward
+- Partially observable Markov decision process (POMDP): When the agent cannot fully observe the environment state
+- Factored Markov decision process (FMDP): Allows the representation of the transition and reward function more compactly so that we can represent large MDPs
+- Continuous [Time|Action|State] Markov decision process: When either time, action, state or any combination of them are continuous
+- Relational Markov decision process (RMDP): Allows the combination of probabilistic and relational knowledge
+- Semi-Markov decision process (SMDP): Allows the inclusion of abstract actions that can take multiple time steps to complete
+- Multi-agent Markov decision process (MMDP): Allows the inclusion of multiple agents in the same environment
+- Decentralized Markov decision process (Dec-MDP): Allows for multiple agents to collaborate and maximize a common reward
