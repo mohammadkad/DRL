@@ -1,0 +1,23 @@
+SpaceInvadersNoFrameskip-v4:
+  env_wrapper:
+    - stable_baselines3.common.atari_wrappers.AtariWrapper
+  frame_stack: 4
+  policy: 'CnnPolicy'
+  n_timesteps: !!float 1e6
+  buffer_size: 100000
+
+  # 1404-06-26
+  # 1e-4 > This is scientific notation for the number 0.0001., It's a shorthand way of writing 1 * 10^(-4).
+  # explicitly tell the YAML parser that the following value (1e-4) should be interpreted as a floating-point number (a decimal number like 0.0001) and not as a string (text like "1e-4").
+  learning_rate: !!float 1e-4
+  
+  batch_size: 32
+  learning_starts: 100000
+  target_update_interval: 1000
+  train_freq: 4
+  gradient_steps: 1
+  exploration_fraction: 0.1
+  exploration_final_eps: 0.01
+  # If True, you need to deactivate handle_timeout_termination
+  # in the replay_buffer_kwargs
+  optimize_memory_usage: False
