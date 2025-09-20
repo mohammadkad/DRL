@@ -41,6 +41,16 @@ This Policy is the function we want to learn, our goal is to find the optimal po
   - action-value function
 - Actor-critic method, which is a combination of value-based and policy-based methods.
 
+###
+TD (Temporal difference) methods, Temporal Difference learning combines ideas from Monte Carlo methods (learning from experience) and Dynamic Programming (bootstrapping).:
+ - TD learning, TD(0)/One-Step TD, TD(λ)/Forward View
+ - SARSA (On-Policy)
+ - SARSE
+ - Q-Learning (Off-Policy)
+ - Value-Based Methods: DQN (Deep Q-Network), Double DQN (DDQN)
+ - Policy-Based Methods: REINFORCE, Actor-Critic
+ - Advanced Actor-Critic Methods: A3C (Asynchronous Advantage Actor-Critic), A2C (Advantage Actor-Critic), DDPG (Deep Deterministic Policy Gradient), TD3 (Twin Delayed DDPG), SAC (Soft Actor-Critic)
+
 ### The difference between policy-based and policy-gradient methods
 Policy-gradient methods, what we’re going to study in this unit, is a subclass of policy-based methods. In policy-based methods, the optimization is most of the time on-policy since for each update, we only use data (trajectories) collected by our most recent version of πθ.
 
