@@ -8,7 +8,8 @@ The Markov Property implies that our agent needs only the current state to decid
 
 - state, action, reward and next state
 - S0, A0, R1, S1
-The agent’s goal is to maximize its *cumulative reward*, called the **expected return**.
+- The agent’s goal is to maximize its *cumulative reward*, called the **expected return**.
+- The main goal of Reinforcement learning is to find the optimal policy π∗ that will maximize the expected cumulative reward.
 
 ### Observations/States Space
 - State s: is a complete description of the state of the world (there is no hidden information). In a fully observed environment.
@@ -28,11 +29,25 @@ The Action space is the set of all possible actions in an environment. The actio
 - Exploration is exploring the environment by trying **random actions** in order to find more information about the environment.
 - Exploitation is exploiting known information to maximize the reward.
 
-### Two main approaches for solving RL problems
+### Main approaches for solving RL problems
 The Policy π: the agent’s brain
 This Policy is the function we want to learn, our goal is to find the optimal policy π*, the policy that maximizes expected return when the agent acts according to it. We find this π* through training.
 
 - Policy-based methods (Directly) : we learn a policy function directly.
   - Deterministic
   - Stochastic
-- Value-based methods (Indirectly) : we learn a value function that maps a state to the expected value of being at that state.
+- Value-based methods (Indirectly) : we learn a value function that maps a state to the expected value of being at that state. The idea is that an optimal value function leads to an optimal policy.
+  - state-value function
+  - action-value function
+- Actor-critic method, which is a combination of value-based and policy-based methods.
+
+### The difference between policy-based and policy-gradient methods
+Policy-gradient methods, what we’re going to study in this unit, is a subclass of policy-based methods. In policy-based methods, the optimization is most of the time on-policy since for each update, we only use data (trajectories) collected by our most recent version of πθ.
+
+The difference between these two methods lies on how we optimize the parameter θ:
+
+- In policy-based methods, we search directly for the optimal policy. We can optimize the parameter
+θ indirectly by maximizing the local approximation of the objective function with techniques like hill climbing, simulated annealing, or evolution strategies.
+
+- In policy-gradient methods, because it is a subclass of the policy-based methods, we search directly for the optimal policy. But we optimize the parameter
+θ directly by performing the gradient ascent on the performance of the objective function J(θ).
