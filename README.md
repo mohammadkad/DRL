@@ -66,3 +66,6 @@ The difference between these two methods lies on how we optimize the parameter �
 
 - In policy-gradient methods, because it is a subclass of the policy-based methods, we search directly for the optimal policy. But we optimize the parameter
 θ directly by performing the gradient ascent on the performance of the objective function J(θ).
+
+### Policy Gradient Theorem
+
