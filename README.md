@@ -51,7 +51,7 @@ This Policy is the function we want to learn, our goal is to find the optimal po
  - SARSE
  - Q-Learning (Off-Policy)
  - Value-Based Methods: DQN (Deep Q-Network), Double DQN (DDQN)
- - Policy-Based Methods: REINFORCE, Actor-Critic
+ - Policy-Based Methods: REINFORCE (Monte-Carlo policy-gradient), Actor-Critic
  - Advanced Actor-Critic Methods: A3C (Asynchronous Advantage Actor-Critic), A2C (Advantage Actor-Critic), DDPG (Deep Deterministic Policy Gradient), TD3 (Twin Delayed DDPG), SAC (Soft Actor-Critic)
 2. MC (Monte Carlo)
  - 
@@ -67,5 +67,6 @@ The difference between these two methods lies on how we optimize the parameter �
 - In policy-gradient methods, because it is a subclass of the policy-based methods, we search directly for the optimal policy. But we optimize the parameter
 θ directly by performing the gradient ascent on the performance of the objective function J(θ).
 
-### Policy Gradient Theorem
+### Policy Gradient Theorem (PGT)
+- The objective function gives us the performance of the agent given a trajectory (state action sequence without considering reward (contrary to an episode)), and it outputs the expected cumulative reward.
 
