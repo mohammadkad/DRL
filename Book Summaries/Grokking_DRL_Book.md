@@ -22,4 +22,16 @@ Mohammad Kadkhodaei
   - Q : The action-value function Q, Q-function, Q(s, a)
   - A : The action-advantage function A, advantage function, A-function, a(s, a) = q(s , a) - v(s)
 
-
+<!-- Chapter 4, 1404-07-02 -->
+### Chapter 4:
+- exploration-exploitation dilemma : Every decision you make is a trade-off between information gathering (exploration) and information exploitation.
+- challenges of learning from evaluative feedback
+- Remember, in DRL, agents learn from feedback that’s simultaneously sequential (as opposed to one shot), evaluative (as opposed to supervised), and sampled (as opposed to exhaustive)
+- Greedy
+- Random
+- Epsilon-greedy: Almost always greedy and sometimes random
+- Decaying epsilon-greedy: First maximize exploration, then exploitation
+- Optimistic initialization strategy
+- softmax strategy
+- upper confidence bound (UCB) strategy
+- Thompson sampling: Balancing reward and risk
