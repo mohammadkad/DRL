@@ -33,13 +33,24 @@ The Action space is the set of all possible actions in an environment. The actio
 The Policy π: the agent’s brain
 This Policy is the function we want to learn, our goal is to find the optimal policy π*, the policy that maximizes expected return when the agent acts according to it. We find this π* through training.
 
-- Policy-based methods (Directly) : we learn a policy function directly.
-  - Deterministic
-  - Stochastic
+- Policy-based methods (Directly) : we learn a policy function directly. We aim to optimize the policy directly without using a value function.
+  1- Deterministic
+  2- Stochastic
+  - Subclasses:
+    - Policy-Gradient methods : optimizes the policy directly by estimating the weights of the optimal policy using Gradient Ascent
+      - Reinforce :
+        - use Monte-Carlo sampling to estimate return (we use an entire episode to calculate the return). we have significant variance in policy gradient estimation.
+        - The Monte Carlo variance, leads to slower training since we need a lot of samples to mitigate it.
 - Value-based methods (Indirectly) : we learn a value function that maps a state to the expected value of being at that state. The idea is that an optimal value function leads to an optimal policy.
   - state-value function
   - action-value function
-- Actor-critic method, which is a combination of value-based and policy-based methods.
+- Actor-critic method (hybrid architecture), which is a combination of value-based and policy-based methods.
+  - stabilize the training by reducing the variance using:
+    - An Actor that controls how our agent behaves (Policy-Based method)
+    - A Critic that measures how good the taken action is (Value-Based method)
+    - Algorithms:
+      -  Advantage Actor Critic (A2C)
+      -  
 
 ### TD vs MC
 - Monte Carlo vs Temporal Difference Learning:
