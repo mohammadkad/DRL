@@ -45,6 +45,7 @@ This Policy is the function we want to learn, our goal is to find the optimal po
   - state-value function
   - action-value function
 - Actor-critic method (hybrid architecture), which is a combination of value-based and policy-based methods.
+  - We learn two function approximations (two neural networks) : 1- A policy that controls how our agent acts 2- A value function to assist the policy update by measuring how good the action taken is
   - stabilize the training by reducing the variance using:
     - An Actor that controls how our agent behaves (Policy-Based method)
     - A Critic that measures how good the taken action is (Value-Based method)
