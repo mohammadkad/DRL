@@ -82,3 +82,22 @@ The difference between these two methods lies on how we optimize the parameter Î
 ### Policy Gradient Theorem (PGT)
 - The objective function gives us the performance of the agent given a trajectory (state action sequence without considering reward (contrary to an episode)), and it outputs the expected cumulative reward.
 
+# Overall:
+Reinforcement Learning Algorithms
+|
+|-- Policy-Based Methods (Directly search for optimal policy)
+|   |-- Cross-Entropy Method (CEM)
+|   |-- REINFORCE
+|   `-- ... etc.
+|
+|-- Value-Based Methods (Learn value function, then derive policy)
+|   |
+|   |-- Methods for *Prediction/Estimation*:
+|   |   |-- **Monte Carlo (MC)**
+|   |   `-- **Temporal-Difference (TD)** (e.g., SARSA, Q-learning)
+|   |
+|   `-- ... etc.
+|
+`-- Actor-Critic Methods (A hybrid of both)
+    |-- Combines a Policy (Actor) with a Value Function (Critic)
+    `-- ... etc.
