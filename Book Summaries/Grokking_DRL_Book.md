@@ -48,5 +48,9 @@ Mohammad Kadkhodaei
  - Input: Environment interaction
  - Output: Optimal policy π* and optimal value function
  - Key Challenge: Balancing exploration vs exploitation
-- Learning to estimate the value of policies
+
+#### Learning to estimate the value of policies
+- Reward: Refers to the one-step reward signal the agent gets
+- Return: Refers to the total discounted rewards.
+- Value function: Refers to the expectation of returns.
 
