@@ -35,3 +35,18 @@ Mohammad Kadkhodaei
 - softmax strategy
 - upper confidence bound (UCB) strategy
 - Thompson sampling: Balancing reward and risk
+
+<!-- 1404-07-05 -->
+### Chapter 5, Evaluating agents’ behaviors:
+#### Prediction Problem (Policy Evaluation)
+ - Goal: Estimate how good a given policy is
+ - Input: Policy π
+ - Output: Value function Vπ(s) or Qπ(s,a)
+ - Key Challenge: Estimating future returns from experience
+#### Control Problem (Policy Optimization)
+ - Goal: Find the optimal policy π*
+ - Input: Environment interaction
+ - Output: Optimal policy π* and optimal value function
+ - Key Challenge: Balancing exploration vs exploitation
+- Learning to estimate the value of policies
+
