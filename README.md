@@ -82,22 +82,69 @@ The difference between these two methods lies on how we optimize the parameter �
 ### Policy Gradient Theorem (PGT)
 - The objective function gives us the performance of the agent given a trajectory (state action sequence without considering reward (contrary to an episode)), and it outputs the expected cumulative reward.
 
-# Overall:
-Reinforcement Learning Algorithms
-|
-|-- Policy-Based Methods (Directly search for optimal policy)
-|   |-- Cross-Entropy Method (CEM)
-|   |-- REINFORCE
-|   `-- ... etc.
-|
-|-- Value-Based Methods (Learn value function, then derive policy)
-|   |
-|   |-- Methods for *Prediction/Estimation*:
-|   |   |-- **Monte Carlo (MC)**
-|   |   `-- **Temporal-Difference (TD)** (e.g., SARSA, Q-learning)
-|   |
-|   `-- ... etc.
-|
-`-- Actor-Critic Methods (A hybrid of both)
-    |-- Combines a Policy (Actor) with a Value Function (Critic)
-    `-- ... etc.
+# Reinforcement Learning Algorithms Hierarchy
+
+## 1. Policy-Based Methods (Direct Policy Optimization)
+### 1.1. Gradient-Free Methods
+- Cross-Entropy Method (CEM)
+- Evolutionary Strategies
+- Covariance Matrix Adaptation (CMA-ES)
+
+### 1.2. Gradient-Based Methods
+- REINFORCE (Monte Carlo Policy Gradient)
+- Natural Policy Gradient
+- Trust Region Policy Optimization (TRPO)
+- Proximal Policy Optimization (PPO)
+
+## 2. Value-Based Methods (Learn Value Function First)
+### 2.1. Prediction Methods (Value Estimation)
+- **Monte Carlo (MC) Methods**
+  - First-Visit MC
+  - Every-Visit MC
+- **Temporal-Difference (TD) Methods**
+  - TD(0)
+  - TD(λ)
+  - **SARSA** (On-Policy TD Control)
+  - **Q-learning** (Off-Policy TD Control)
+  - Expected SARSA
+
+### 2.2. Approximate Methods
+- Linear Function Approximation
+- Deep Q-Network (DQN) and variants
+
+## 3. Actor-Critic Methods (Hybrid Approach)
+### 3.1. Basic Actor-Critic
+- Advantage Actor-Critic (A2C)
+- Asynchronous Advantage Actor-Critic (A3C)
+
+### 3.2. Advanced Actor-Critic
+- Soft Actor-Critic (SAC)
+- Twin Delayed DDPG (TD3)
+- Deep Deterministic Policy Gradient (DDPG)
+
+## 4. Model-Based Methods
+### 4.1. Learn the Model
+- Dyna-Q
+- Model-Based Value Expansion
+
+### 4.2. Use the Model
+- Monte Carlo Tree Search (MCTS)
+- iLQR (Iterative LQR)
+
+## 5. Classification by Update Mechanism
+### 5.1. Full Returns
+- **Monte Carlo** (uses complete episode returns)
+
+### 5.2. Bootstrapping
+- **Temporal-Difference** (uses estimated returns)
+- Dynamic Programming (uses full model)
+
+### 5.3. Direct Policy Search
+- **Cross-Entropy Method** (optimizes policy directly)
+- Policy Gradient methods
+
+## Key Relationships:
+- **CEM** ↔ Policy-Based (gradient-free)
+- **MC** ↔ Value-Based (full returns)
+- **TD** ↔ Value-Based (bootstrapping)
+- **Actor-Critic** = Policy-Based (Actor) + Value-Based (Critic)
