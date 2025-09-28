@@ -54,3 +54,13 @@ Mohammad Kadkhodaei
 - Return: Refers to the total discounted rewards.
 - Value function: Refers to the expectation of returns.
 
+<!-- 1404-07-06 -->
+### Chapter 6, Improving agents’ behaviors
+- The main reason for this is that Q-functions, unlike V-functions, let us see the value of actions without having to use an MDP
+- Second, after we obtain these Q-value estimates, we use them to improve the policies.
+- A reward is a numeric signal indicating the goodness of a transition.
+- A return is the summation of all the rewards received during an episode.
+- A value function is the expected return.
+- In RL, there is gathering, learning, and improving.
+- The Monte Carlo target consists of the actual return: really, nothing else.
+- The temporal-difference target consists of an estimated return.
