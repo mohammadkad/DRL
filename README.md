@@ -62,9 +62,9 @@ This Policy is the function we want to learn, our goal is to find the optimal po
  - SARSA (On-Policy)
  - SARSE
  - Q-Learning (Off-Policy)
- - Value-Based Methods: DQN (Deep Q-Network), Double DQN (DDQN)
- - Policy-Based Methods: REINFORCE (Monte-Carlo policy-gradient), Actor-Critic
- - Advanced Actor-Critic Methods: A3C (Asynchronous Advantage Actor-Critic), A2C (Advantage Actor-Critic), DDPG (Deep Deterministic Policy Gradient), TD3 (Twin Delayed DDPG), SAC (Soft Actor-Critic)
+ - Value-Based Methods: NFQ, DQN (Deep Q-Network), Double DQN (DDQN), PER
+ - Policy-Based Methods: REINFORCE (Monte-Carlo policy-gradient), VPG, GAE, Actor-Critic
+ - Advanced Actor-Critic Methods: A3C (Asynchronous Advantage Actor-Critic), A2C (Advantage Actor-Critic), DDPG (Deep Deterministic Policy Gradient), TD3 (Twin Delayed DDPG), SAC (Soft Actor-Critic), PPO
 2. MC (Monte Carlo)
  - 
 
