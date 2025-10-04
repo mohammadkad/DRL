@@ -13,7 +13,7 @@
 - leveraging prior experiences to learn new tasks more efficiently
 
 ### definition:
-Catastrophic forgetting: degradation of model performance on previous tasks upon learning new ones
-Knowledge transfer: involves leveraging knowledge from previous tasks to facilitate learning on new tasks
+- Catastrophic forgetting: degradation of model performance on previous tasks upon learning new ones
+- Knowledge transfer: involves leveraging knowledge from previous tasks to facilitate learning on new tasks
 
 
