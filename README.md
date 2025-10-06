@@ -158,3 +158,7 @@ The difference between these two methods lies on how we optimize the parameter �
   - Create a **dataset** using one or more policies and/or human interactions.
   - Run offline RL on this dataset to learn a policy
   - Problem: the **counterfactual queries problem**, What do we do if our agent decides to do something for which we don’t have the data? For instance, turning right on an intersection but we don’t have this trajectory.
+
+## Generalisation in Reinforcement Learning:
+- Reality is varied, non-stationarity and open-ended.
+- 
