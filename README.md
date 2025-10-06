@@ -149,3 +149,12 @@ The difference between these two methods lies on how we optimize the parameter �
 - **MC** ↔ Value-Based (full returns)
 - **TD** ↔ Value-Based (bootstrapping)
 - **Actor-Critic** = Policy-Based (Actor) + Value-Based (Critic)
+
+## Offline vs. Online Reinforcement Learning:
+- Deep Reinforcement Learning agents learn with **batches of experience**. The question is, how do they collect it?
+- Online RL, which is what we’ve learned, the agent **gathers data directly**. it collects a batch of experience by interacting with the environment. Then, it uses this experience **immediately** (or via some replay buffer) to learn from it (update its policy)
+- Online Rl, this implies that either you train your agent directly in the **real world** or have a **simulator**.
+- Offline Rl, the agent only uses data collected from other agents or human demonstrations. It does not interact with the environment.
+  - Create a **dataset** using one or more policies and/or human interactions.
+  - Run offline RL on this dataset to learn a policy
+  - Problem: the **counterfactual queries problem**, What do we do if our agent decides to do something for which we don’t have the data? For instance, turning right on an intersection but we don’t have this trajectory.
