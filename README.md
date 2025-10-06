@@ -9,6 +9,7 @@ The Markov Property implies that our agent needs only the current state to decid
 - state, action, reward and next state
 - S0, A0, R1, S1
 - The agent’s goal is to maximize its *cumulative reward*, called the **expected return** or **return**.
+- Because RL is based on the **reward hypothesis**: all goals can be described as the maximization of the expected cumulative reward.
 - The main goal of Reinforcement learning is to find the optimal policy π∗ that will maximize the expected cumulative reward.
 
 ### Observations/States Space
