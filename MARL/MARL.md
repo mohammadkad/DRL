@@ -23,3 +23,7 @@
   - A single policy is learned from all the agents.
   - The reward is global.
 
+### divided into three main types:
+- centralized training and execution (CTE)
+- centralized training for decentralized execution (CTDE)*
+- Decentralized training and execution (DTE)
