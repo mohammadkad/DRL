@@ -162,3 +162,5 @@ The difference between these two methods lies on how we optimize the parameter Î
 ## Generalisation in Reinforcement Learning:
 - Reality is varied, non-stationarity and open-ended.
 - 
+
+<!-- last edit : 1404-09-09 -->
