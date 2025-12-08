@@ -10,3 +10,7 @@
 ### General
 - AgileRL, https://agilerl.com
 - Stable-Baselines3, https://github.com/DLR-RM/stable-baselines3, https://stable-baselines3.readthedocs.io/en/master/#
+
+### Learning
+- https://github.com/andri27-ts/Reinforcement-Learning
+- https://github.com/openai/spinningup
