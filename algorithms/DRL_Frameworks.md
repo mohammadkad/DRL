@@ -4,7 +4,8 @@
 - epymarl, https://github.com/uoe-agents/epymarl
 
 ### Others:
-minimalRL, https://github.com/seungeunrho/minimalRL
+- DeepRL, https://github.com/ShangtongZhang/DeepRL <!-- 1404-09-17 -->
+- minimalRL, https://github.com/seungeunrho/minimalRL
 
 ### General
 - AgileRL, https://agilerl.com
