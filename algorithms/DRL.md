@@ -7,6 +7,7 @@
 ### Others:
 - DeepRL, https://github.com/ShangtongZhang/DeepRL <!-- 1404-09-17 -->
 - minimalRL, https://github.com/seungeunrho/minimalRL
+- rlkit, https://github.com/rail-berkeley/rlkit <!-- 1404-09-29 -->
 
 ### Milti-agent
 - pymarl, https://github.com/oxwhirl/pymarl
