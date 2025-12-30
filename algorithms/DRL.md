@@ -5,6 +5,7 @@
 - 
 
 ### Others:
+- Popular-RL-Algorithms, https://github.com/quantumiracle/Popular-RL-Algorithms <!-- 1404-10-09 -->
 - DeepRL, https://github.com/ShangtongZhang/DeepRL <!-- 1404-09-17 -->
 - minimalRL, https://github.com/seungeunrho/minimalRL
 - rlkit, https://github.com/rail-berkeley/rlkit <!-- 1404-09-29 -->
