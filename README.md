@@ -163,4 +163,13 @@ The difference between these two methods lies on how we optimize the parameter �
 - Reality is varied, non-stationarity and open-ended.
 - 
 
+### Prioritized Experience Replay (PER):
+- In standard experience replay, an agent stores interactions (like state, action, reward, and next state) in a memory buffer and randomly samples them during training.
+- PER modifies this by assigning a priority to each experience, ensuring that more “important” experiences are sampled more frequently.
+- Priorities are typically based on the temporal difference (TD) error—the difference between the predicted and target Q-values.
+- Experiences with larger TD errors are considered more valuable because they represent situations where the agent’s predictions were less accurate, indicating opportunities for faster learning.
+- This prioritization helps the agent focus on less predictable or more impactful events, accelerating training.
+- Priorities are often managed using a **binary heap** or a **sum-tree** data structure to quickly retrieve high-priority experiences.
+- PER uses **importance sampling (IS)** weights during gradient updates. These weights adjust the impact of each sample based on how likely it was to be selected, ensuring that the agent’s updates remain unbiased despite uneven sampling.
+- For example, a rarely sampled experience with low priority would receive a higher IS weight to compensate.
 <!-- last edit : 1404-09-09 -->
