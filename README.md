@@ -173,3 +173,4 @@ The difference between these two methods lies on how we optimize the parameter Î
 - PER uses **importance sampling (IS)** weights during gradient updates. These weights adjust the impact of each sample based on how likely it was to be selected, ensuring that the agentâ€™s updates remain unbiased despite uneven sampling.
 - For example, a rarely sampled experience with low priority would receive a higher IS weight to compensate.
 <!-- last edit : 1404-09-09 -->
+<!-- after Internet shutdown, 1405-01-30 -->
