@@ -1,13 +1,9 @@
-# Why Actor-Critic Methods? (Bias vs. Variance Trade-off)
-
-## Overview
-
-In Deep Reinforcement Learning, there are two primary approaches:
+This is an excellent question because it gets at the core trade-off in deep reinforcement learning. You already understand the two primary approaches:
 
 - **Value-based (e.g., DQN):** Learn a value function \( Q(s,a) \) or \( V(s) \), then derive a policy implicitly (e.g., \( \epsilon \)-greedy). **Low variance, high bias** (when using function approximation).
 - **Policy-based (e.g., REINFORCE):** Directly learn a policy \( \pi(a|s) \) by gradient ascent on expected return. **High variance, low bias** (in principle).
 
-**Actor-critic methods** emerge as a way to **balance bias and variance**, getting the best of both worlds.
+Actor-critic methods emerge as a way to **balance bias and variance**, getting the best of both worlds.
 
 ---
 
@@ -24,7 +20,7 @@ The standard policy gradient is:
 where \( G_t = \sum_{k=t}^T \gamma^{k-t} r_k \) is the **actual return from time t**.
 
 - **High variance**: \( G_t \) can vary wildly depending on random actions and environment stochasticity. The gradient estimate has huge noise, leading to slow, unstable learning.
-- **Why?** Because \( G_t \) is an **unbiased estimate** of the value of being in state \( s_t \), but it's a Monte Carlo sample — it includes all future randomness.
+- Why? Because \( G_t \) is an **unbiased estimate** of the value of being in state \( s_t \), but it’s a Monte Carlo sample — it includes all future randomness.
 
 ### 2. Reducing variance with a baseline
 
@@ -34,9 +30,9 @@ A standard trick: subtract a baseline \( b(s_t) \) from \( G_t \):
 \nabla J(\theta) = \mathbb{E} \left[ \sum_t \nabla_\theta \log \pi_\theta(a_t|s_t) \, (G_t - b(s_t)) \right]
 \]
 
-This **reduces variance** without changing the expected gradient (if \( b(s_t) \) doesn't depend on action).
+This **reduces variance** without changing the expected gradient (if \( b(s_t) \) doesn’t depend on action).
 
-Choosing \( b(s_t) = V^\pi(s_t) \) (the true state-value function) minimizes variance optimally. But we don't know \( V^\pi(s_t) \) — we have to **estimate it**.
+Choosing \( b(s_t) = V^\pi(s_t) \) (the true state-value function) minimizes variance optimally. But we don’t know \( V^\pi(s_t) \) — we have to **estimate it**.
 
 ---
 
@@ -104,7 +100,6 @@ The policy gradient becomes:
 ## Summary
 
 We need actor-critic methods because:
-
 1. Pure policy gradients are **too high variance** for deep neural networks to learn efficiently.
 2. Bootstrapping with a learned value function (the critic) **drastically reduces variance**.
 3. The price is **potential bias** — but we can manage this with careful design (GAE, target networks, etc.).
