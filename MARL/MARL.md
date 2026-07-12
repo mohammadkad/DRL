@@ -27,3 +27,8 @@
 - centralized training and execution (CTE)
 - centralized training for decentralized execution (CTDE)*
 - Decentralized training and execution (DTE)
+
+
+### Algorithms:
+- MATD3 (Multi-Agent Twin Delayed Deep Deterministic Policy Gradients): https://arxiv.org/abs/1910.01465
+- Multi-Agent Deep Deterministic Policy Gradient (MADDPG): https://arxiv.org/pdf/1706.02275.pdf
